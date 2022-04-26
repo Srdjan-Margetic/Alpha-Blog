@@ -1,9 +1,7 @@
-<h1>Create a new article</h1>
+<h1>Edit article</h1>
 
 <% if @article.errors.any? %>
   <h2>The folloving errors preventes the article form being saved!</h2>
-    <h2><%= pluralize(@article.errors.count, "error") %> prevented this record from being saved:</h2>
-
   <% @article.errors.full_messages.each do |msg| %>
     <ul>
       <li><%= msg %></li>
@@ -11,7 +9,7 @@
   <% end %>
 <% end %>
 
-<%= form_with scope: :article, url: articles_path, local: true do |f| %>
+<%= form_with(model: @article, local: true) do |f| %>
   <p> 
       <%= f.label :title %> <br>
       <%= f.text_field :title %>
@@ -27,4 +25,4 @@
   </p>
 <% end %>
 
-<p><%= link_to 'Return to articles listing', articles_path %></p>
+<p><%= link_to 'Cancel and return to articles listing', article_path %></p>
