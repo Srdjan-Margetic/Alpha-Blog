@@ -1,0 +1,12 @@
+<% if @article.errors.any? %>
+  <div class="alert alert-dangers alert-dismissible fade show" role="alert">
+    <h4 class="alert-heading">The folloving errors preventes the article form being saved!</h4>
+    <% @article.errors.full_messages.each do |msg| %>
+      <%=  @article.inspect %>
+      <ul>
+        <li><%= msg %></li>
+      </ul>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <% end %>
+  </div>
+<% end %>

@@ -10,6 +10,60 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require_bootstrap
  *= require_tree .
  *= require_self
  */
+
+#home-container {
+  margin-top: 25px;
+}
+
+.jumbotron {
+  background-image: url('hero-bk.jpg') !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jumbotron .btn-jumbotron {
+  width: 30%;
+  margin: 0 auto;
+}
+
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
