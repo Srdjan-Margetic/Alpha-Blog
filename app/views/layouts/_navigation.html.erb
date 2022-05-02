@@ -35,6 +35,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <%= link_to "View your profile", user_path(current_user), class:"dropdown-item" %>
               <%= link_to "Edit your profile", edit_user_path(current_user), class:"dropdown-item" %>
+              <%= link_to "Delete your profile", user_path(current_user), class:"dropdown-item text-danger",   data: { turbo_method: :delete, turbo_confirm: "Are you sure" } %>
               
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
